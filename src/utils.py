@@ -47,7 +47,7 @@ def column_normalization(df: pd.DataFrame): #Verify the parameter's data type is
 #  function that clean up spaces in text 
 #--------------------------------------------------------------------------
 
-def clean_text_spaces(df: pd.DataFrame):
+def clean_text_spaces(df: pd.DataFrame): #Verify the parameter's data type is dataframe.
     '''
     Clean extra spaces from text columns.
 
@@ -82,7 +82,7 @@ def clean_text_spaces(df: pd.DataFrame):
 #  function that change the data type of each column 
 #--------------------------------------------------------------------------
 
-def data_type_conversion(df: pd.DataFrame, types: dict[str, str]):
+def data_type_conversion(df: pd.DataFrame, types: dict[str, str]):#Verify the parameter's data type is dataframe and diccionary.
     '''
     Convert DataFrame columns to the specified data types.
 
@@ -122,7 +122,7 @@ def data_type_conversion(df: pd.DataFrame, types: dict[str, str]):
 # This function handles null values ​​and how to convert them according to my parameters.
 #--------------------------------------------------------------------------------------
 
-def handle_nulls(df: pd.DataFrame, strategy: dict = None):
+def handle_nulls(df: pd.DataFrame, strategy: dict = None): #Verify the parameter's data type is dataframe and a diccionary.
     """
     Handle null values in a DataFrame.
 
@@ -183,11 +183,13 @@ def handle_nulls(df: pd.DataFrame, strategy: dict = None):
 
 
 
-
+#---------------------------------------------------------------------------------------------------------------
+#  function removes duplicates from the DataFrame; ideal for use after normalizing communes and data types.
+#---------------------------------------------------------------------------------------------------------------
 def remove_duplicates(
     df: pd.DataFrame,
-    subset: list[str] = None
-):
+    subset: list[str] = None 
+): #Verify the parameter's data type is dataframe and a list.
     """
     Remove duplicate records from a DataFrame.
 
